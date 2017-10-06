@@ -14,10 +14,11 @@ RUN pip install awscli --user --upgrade
 ENV PATH "$PATH:~/.local/bin"
 
 RUN gem update --system --no-rdoc --no-ri -- --use-system-libraries
+RUN gem install bundler -v 1.13.3 --no-rdoc --no-ri -- --use-system-libraries
 RUN gem install middleman -v 3.4.1 --no-rdoc --no-ri -- --use-system-libraries
-RUN gem install middleman-livereload -v 3.3.0 --no-rdoc --no-ri -- --use-system-libraries
-RUN gem install middleman-autoprefixer --no-rdoc --no-ri -- --use-system-libraries
-RUN gem install middleman-imageoptim --no-rdoc --no-ri -- --use-system-libraries
-RUN gem install middleman-pagination --no-rdoc --no-ri -- --use-system-libraries
-RUN gem install middleman-search --no-rdoc --no-ri -- --use-system-libraries
-RUN gem install bundler --no-rdoc --no-ri -- --use-system-libraries
+RUN gem install middleman-autoprefixer -v 2.7.0 --no-rdoc --no-ri -- --use-system-libraries
+RUN gem install middleman-blog -v 3.5.3 --no-rdoc --no-ri -- --use-system-libraries
+RUN gem install middleman-livereload -v 3.3.4 --no-rdoc --no-ri -- --use-system-libraries
+RUN gem install middleman-imageoptim -v 0.2.1 --no-rdoc --no-ri -- --use-system-libraries
+RUN gem install middleman-pagination -v 1.2.0 --no-rdoc --no-ri -- --use-system-libraries
+RUN gem install middleman-search -v 0.8.0 --no-rdoc --no-ri -- --use-system-libraries
